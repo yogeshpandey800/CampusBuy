@@ -1,0 +1,17 @@
+const mongoose = require("mongoose");
+
+const userSchema = new mongoose.Schema({
+  email: { type: String, required: true, unique: true },
+  name: String,
+  password: String,
+  role: { type: String, enum: ["user", "admin"], default: "user" },
+  otp: String,
+  otpExpires: Date,
+  branch: { type: String, default: '' },
+  whatsapp: { type: String, default: '' },
+  profileImage: { type: String, default: 'https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png' },
+  resetPasswordOtp: String,
+  resetPasswordExpires: Date
+});
+
+module.exports = mongoose.model("User", userSchema);
