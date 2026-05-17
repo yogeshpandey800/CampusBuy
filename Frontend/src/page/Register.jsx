@@ -199,10 +199,10 @@ function Register() {
               <p className="text-center text-gray-500 dark:text-gray-300 text-sm mt-4">
                 Or contact us directly at{" "}
                 <a
-                  href="mailto:buynblast@gmail.com"
+                  href="mailto:2024073074@gmail.com"
                   className="text-indigo-600 hover:underline"
                 >
-                  buynblast@gmail.com
+                  2024073074@gmail.com
                 </a>
               </p>
             </form>

@@ -4,8 +4,9 @@ import { useSelector } from "react-redux";
 import Chatpage from "../page/Chatpage";
 import chat from "../assets/chatLogo.png";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiLogOut, FiMenu } from "react-icons/fi"; // Added FiMenu
+import { FiLogOut, FiMenu } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
+import AppLogo from "./AppLogo";
 
 const HomeHeader = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -90,13 +91,12 @@ const HomeHeader = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <motion.img
-            src="https://res.cloudinary.com/dzkprawxw/image/upload/v1754247101/final_logo_z1ncld.png"
-            alt="Logo"
-            className="w-14 h-14 rounded-full object-cover"
+          <motion.div
             whileHover={{ rotate: [0, 10, -10, 0] }}
             transition={{ duration: 0.6 }}
-          />
+          >
+            <AppLogo className="w-12 h-12" />
+          </motion.div>
         </motion.a>
       </div>
 

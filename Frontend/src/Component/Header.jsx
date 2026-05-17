@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
+import AppLogo from "./AppLogo";
 
 const Header = () => {
   const { showLogin, showSignup } = useSelector((state) => state.header);
@@ -25,13 +26,12 @@ const Header = () => {
     <header className="shadow-md flex items-center justify-between px-4 py-2 relative z-50 bg-white dark:bg-gray-900 dark:border-b dark:border-gray-800 transition-colors duration-300">
       {/* Logo */}
       <Link to="/" className="flex items-center">
-        <motion.img
-          src="https://res.cloudinary.com/dzkprawxw/image/upload/v1754247101/final_logo_z1ncld.png"
-          alt="Logo"
-          className="w-14 h-14 rounded-full object-cover"
+        <motion.div
           whileHover={{ rotate: [0, 8, -8, 0] }}
           transition={{ duration: 0.5 }}
-        />
+        >
+          <AppLogo className="w-12 h-12" />
+        </motion.div>
       </Link>
 
       {/* Desktop Menu */}
