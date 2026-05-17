@@ -1,10 +1,6 @@
 import React from "react";
 
-/**
- * MMMUT Buy & Sell — inline SVG logo.
- * A shopping bag with a graduation cap on top, representing a campus marketplace.
- * Uses indigo/purple brand colours that match the app's theme.
- */
+
 const AppLogo = ({ className = "w-12 h-12" }) => (
   <svg
     viewBox="0 0 64 64"
